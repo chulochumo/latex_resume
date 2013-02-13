@@ -1,0 +1,223 @@
+%% start of file `ed-resume.tex'.
+
+%% Copyright 2006-2012 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11p,letterpaper,sans]{moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                        % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{green}                          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\renewcommand{\familydefault}{\sfdefault}    % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                  % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                         % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+%\usepackage[headheight=20pt]{fancyhdr}
+
+
+% adjust the page margins
+\usepackage[scale=0.92]{geometry}
+\setlength{\hintscolumnwidth}{2cm}           % if you want to change the width of the column with the dates
+\setlength{\maketitlenamewidth}{9cm}        % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{cite}
+
+% personal data
+\firstname{Eduardo}
+\familyname{Gonzalez}
+%\title{}               % optional, remove the line if not wanted
+\address{1157 Lago Vista Ln}{San Marcos, TX 78666}    % optional, remove the line if not wanted
+\mobile{+1~(979)~665~6838}                     % optional, remove the line if not wanted
+%\phone{+2~(345)~678~901}                      % optional, remove the line if not wanted
+%\fax{+3~(456)~789~012}                        % optional, remove the line if not wanted
+\email{chulochumo@gmail.com}                          % optional, remove the line if not wanted
+\homepage{chulochumo.github.com}                    % optional, remove the line if not wanted
+%\extrainfo{additional information}            % optional, remove the line if not wanted
+%\photo[64pt][0.4pt]{picture}                  % '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file; optional, remove the line if not wanted
+%\quote{Some quote (optional)}                 % optional, remove the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+\makeatletter
+\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+\makeatother
+
+
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\setlength{\headheight}{14pt}
+%\setlength{\headsep}{5pt}
+%\setlength{\vspace}{10pt}
+
+%\begin{CJK*}{UTF8}{gbsn}                     % to typeset your resume in Chinese using CJK
+\maketitle
+\vspace*{-2\baselineskip}
+\section{Education}
+\cventry{2011 - 2013}{(Candidate) M.S in Software Engineering}{Texas State University}{San Marcos, TX}{\textit{3.5/4.0}}{}  % arguments 3 to 6 can be left empty
+\cventry{2007 - 2011}{B.S in Electrical Engineering}{Texas State Unversity}{San Marcos, TX}{\textit{3.36/4.0}}{Specialized in Communication Systems and Networks}
+
+\section{Master thesis}
+\cvitem{title}{\emph{SCTP: An In-Depth Analysis of Retransmission
+    Characteristics and the Effect of Network Conditions on Transfer Optimization.}}
+\cvitem{advisors}{Dr. Stan McClellan, Dr. Wuxu Peng, Dr. Mina Guirguis}
+\cvitem{description}{SCTP is a relatively new transport protocol
+  originally designed to transfer SS7 signaling messages over packet
+  switched networks but that has been standarized as a general
+  transport protocol. This thesis focuses on its retransmission
+  mechanisms and the peculiar effects that certain network conditions
+  have on them providing insight into optimization opportunities.}
+
+\section{Computer skills}
+\cvitem{basic}{Python, HTML, Java, Javascript, PHP, Linux Kernel, XML,
+CMake, Autotools}
+\cvitem{intermediate}{MATLAB/Simulink, C++, Labview,
+  MultiSim, TCP/IP, Linux Development, Lab Testing Equipment,
+  WireShark, Git}
+\cvitem{advanced}{Assembly(Motorola 68k), SCTP, C, Shell}
+
+\bibliographystyle{IEEEbib}
+\bibliography{IEEEabrv,abbrevs,EdResume}
+
+\section{Experience}
+%\subsection{External}
+
+%\cventry{Ongoing}{Audio DSP}{Personal Group Project}{San Marcos, TX}{}{Classify and recommend similar songs based on DSP methodology.}
+
+\cventry{Jan 2012 - Present}{Research Assistant}{Thesis}{Texas State
+  University}{}{Spearheaded research on a relatively new transport
+  protocol (SCTP).
+\begin{itemize}
+\item Performed a extensive literature review on current SCTP
+  research.
+\item Designed and developed testing environment running on Linux that
+  automated Kernel Module compilation, loading/unloading and logged
+  relevant SCTP transfer parameters.
+\item Performed in-depth analysis of SCTP retransmission parameters
+  including: Return Time Out, Round Trip Time and Return Time Out
+  Minimum.
+\item Performed in-depth analysis of the effect of network parameters
+  on SCTP performance including: Packet Loss, Packet Spacing and
+  Packet Delay.
+\item Evaluated a proposed adaptive algorithm for managing the Return
+  Time Out Minimum SCTP parameter.
+\item Discovered bug in SCTP Linux Kernel Module and submitted fix to
+  developers mailing list.
+\end{itemize}}
+
+\cventry{Jul - Sep 2012}{GNURadio Module for Custom SDR
+  Platform}{Freelance Project}{Austin, TX}{}{Developed a GNURadio
+  module to control, receive and display samples from a custom high
+  bandwidth radio receiver. 
+\begin{itemize}
+\item Created C Library that used TCP sockets to send and receive
+  custom control structures from SDR hardware and used UDP sockets to
+  receive raw IQ samples from SDR hardware in VITA49 format over
+  10GbE.
+\item Created Python wrappings for C library using SWIG.
+\item Created graphical block for GNURadio Companion using XML.
+\end{itemize}}
+
+\cventry{Aug - Dec 2011}{Vibration Sensor System}{Freelance Project}{Austin, TX}{}{Created a small embedded system that used an accelerometer to measure large vibrations.}
+
+\cventry{Jun - Aug  2011}{Speech Detector}{Flex-Radio Systems}{Round
+  Rock, TX}{}{Created non-computationally intensive speech detector
+  for existing Software Designed Radio System based on Motorola's
+  MICOM circuit \cite{VOXPaper}.
+\begin{itemize}
+\item Received and analyzed schematic for an analog speech detection
+  system developed in the 70s for HAM Radio operators.
+\item Modeled analog circuit using Multisim with a speech audio file
+  as input.
+\item Created a digital model of the analog speech detector using
+  Simulink.
+\item Conducted a literature review to find applicable approaches for
+  speech detection in audio.
+\item Combined features from the analog circuit and digital approaches
+to create a robust speech detection system that maintained very low
+computation overhead.
+\end{itemize}}%
+
+%\subsection{School Related}
+\cventry{Jan - Apr 2010/2011}{Autonomous Robot}{IEEE Student
+  Chapter}{}{}{Designed and constructed small autonomous robots (from scratch) for
+  the IEEE Region 5 Student Robotics Competion. 
+\begin{itemize}
+\item Programmed entirely in assembly (68k) on Freescale 68HC12.
+\item Small mobile robots completed specific taks, including locating,
+analyzing and transporting objects while avoiding obstacles.
+\item Used a variety of sensors (IR, UltraSonic, Pressure) to complete
+tasks.
+\end{itemize}}
+
+\cventry{Feb - Mar 2011}{CPU Pipeline Simulator}{Class Project}{}{}{ Implemented a MIPS interpreter with a simulation of CPU Pipeline execution including collisions in C. }
+
+\cventry{Jan - Dec 2010}{Real-Time Powerline DAQ}{Capstone
+  Project}{}{}{Modified existing LabView DAQ System and created new
+  system in order to capture, save and display real-time waveforms
+  using Agilent U2353A DAQ.
+\begin{itemize}
+\item Designed as Qued-State Machine.
+\item Used primarily to capture voltage and current information from
+live power-line feeds.
+\item Allos the implementation of post caputre processing on live
+  streams using Matlab.
+\end{itemize}}
+
+\cventry{Aug - Dec 2010}{Teaching Assistant}{``Circuits and Devices''}{}{}{Helped manage class lab section.}
+
+%\cventry{year--year}{Job title}{Employer}{City}{}{Description line 1\newline{}Description line 2}
+
+\section{Activities}
+\cventry{2010 - 2011}{President}{IEEE Student Branch}{}{}{
+  \begin{itemize}
+  \item Awarded Outstanding Small Student Branch in Region 5 during term.
+  \item Represented the TxState IEEE Student Branch in all external affairs
+  \item Hosted ``Future City'' Competition for middle school kids
+  \item Founding member of Student Branch
+  \end{itemize} }
+
+\cventry{2010 - 2011}{Vice-President}{Water Polo Club}{}{}{
+  \begin{itemize}
+  \item Help manage Club's operations and reprentation within school system.
+  \end{itemize} }
+
+
+%\section{Extra 1}
+%\cvlistitem{Item 1}
+%\cvlistitem{Item 2}
+%\cvlistitem{Item 3}
+
+\renewcommand{\listitemsymbol}{-~}            % change the symbol for lists
+
+% Publications from a BibTeX file without multibib\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% for BibTeX numerical labels
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{EdResume}                   % 'publications' is the name of a BibTeX file
+
+%\section{Publications}
+
+%\bibliographystyle{IEEEbib}
+%\bibliography{IEEEabrv,abbrevs,EdResume}
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{EdResume}              % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%%\bibliographystylemisc{plain}
+%\bibliographymisc{EdResume}              % 'publications' is the name of a BibTeX file
+
+%\clearpage\end{CJK*}                         % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
