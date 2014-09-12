@@ -24,7 +24,7 @@
 \firstname{Eduardo}
 \familyname{Gonzalez}
 %\title{}  
-\address{1157 Lago Vista Ln}{San Marcos, TX 78666}
+\address{11725 Raymond C Ewry ln}{Austin, TX 78748}
 \mobile{+1~(979)~665~6838}                     
 \email{chulochumo@gmail.com}                   
 \homepage{chulochumo.github.com}               
@@ -41,23 +41,15 @@
 \maketitle
 \vspace*{-2\baselineskip}
 \section{Education}
-\cventry{2011 - 2013}{(Candidate) M.S in Software Engineering}{Texas
-  State University}{San Marcos, TX}{\textit{3.3/4.0}}{} 
+\cventry{2011 - 2014}{M.S in Software Engineering}{Texas
+  State University}{San Marcos, TX}{}{} 
 \cventry{2007  - 2011}{B.S in Electrical Engineering}{Texas State Unversity}{San
-  Marcos, TX}{\textit{3.36/4.0}}{Specialized in Communication Systems
+  Marcos, TX}{}{Specialized in Communication Systems
   and Networks}
 
 \section{Master thesis}
-\cvitem{title}{\emph{SCTP: An In-Depth Analysis of Retransmission
-    Characteristics and the Effect of Network Conditions on Transfer
-    Optimization.}} \cvitem{advisors}{Dr. Stan McClellan, Dr. Wuxu
-  Peng, Dr. Mina Guirguis} \cvitem{description}{SCTP is a relatively
-  young transport protocol originally designed to transfer SS7 signaling
-  messages over packet switched networks but that has been standarized
-  as a general transport protocol. This thesis focuses on its
-  retransmission mechanisms and the peculiar effects that certain
-  network conditions have on them providing insight into optimization
-  opportunities.}
+\cvitem{title}{\emph{Reducing SCTP's (Stream Control Transmission Protocol) Time-to-Complete by Manipulation of its Retransmission Time Out Minimum \cite{EdThesis}}} \cvitem{advisors}{Dr. Stan McClellan, Dr. Wuxu
+  Peng, Dr. Mina Guirguis} \cvitem{description}{The Stream Control Transmission Protocol (SCTP) is a relatively young transport protocol that was originally designed to transfer SS7 signaling messages over packet switched networks but has since been standardized for general use. This thesis focuses on SCTP's retransmission mechanisms and how they're affected by network conditions, providing insight into optimization opportunities. For this purpose a research platform is presented that enables rapid prototyping of new algorithms and fast turnover of performance data which is then used to verify previous SCTP research. Finally, we present a novel algorithm for dynamically determining the optimum Retransmission Time Out Minimum (RTOmin) value of an SCTP association that significantly improves performance while avoiding spurious retransmissions.}
 
 \section{Computer skills}
 \cvitem{basic}{Python, HTML, Java, Javascript, Linux Kernel, XML,
@@ -72,8 +64,43 @@ CMake, Autotools, Qt, }
 
 \section{Experience}
 
-\cventry{Jan 2012 - Present}{Research Assistant}{Thesis}{Texas State
-  University}{}{Spearheaded research on a relatively young transport
+\cventry{Aug 2013 - Present}
+{Software Engineer}
+{FlexRadio Systems}
+{Austin, TX}
+{}
+{
+Part of an interdisciplinary team writing software for high performance networked radio transceivers and one of several ``full-stack'' software engineers working with u-boot, Embedded Linux, DSP algorithms, network control, and user facing GUI components \cite{DCCPaper}.\\
+Main duties include:
+\begin{itemize}
+\item Maintaining embedded Linux Kernel and modules
+\item Maintaining Audio CODEC binaries and modules
+\item Embedded software specification, design and implementation 
+\item Improving software development tools and workflow
+\item Writing and maintaining Windows WPF GUI components (C\#)
+\end{itemize}
+}
+
+\cventry{Apr - Jul 2013}
+{Contract Software Engineer}
+{FlexRadio Systems}
+{Austin, TX}
+{}
+{
+\begin{itemize}
+\item Characterized, modified and improved existing Audio DSP Algorithms
+\item Implemented DSP algorithms within existing C codebase
+\item Maintain and expand on Audio CODEC binaries and their respective Linux Kernel modules
+\end{itemize}
+}
+
+\cventry{Jan - Dec 2012/2013}
+{Research Assistant}
+{Thesis}
+{Texas State University}
+{}
+{
+Spearheaded research on a relatively young transport
   protocol (SCTP).
 \begin{itemize}
 \item Performed a extensive literature review on current SCTP
@@ -91,10 +118,16 @@ CMake, Autotools, Qt, }
   Time Out Minimum SCTP parameter.
 \item Discovered bug in SCTP Linux Kernel Module and submitted fix to
   developers mailing list.
-\end{itemize}}
+\end{itemize}
+}
 
-\cventry{Jul - Sep 2012}{GNURadio Module for Custom SDR
-  Platform}{Freelance Project}{Austin, TX}{}{Developed a GNURadio
+\cventry{Jul - Sep 2012}
+{GNURadio Module for Custom SDR Platform}
+{FlexRadio Systems}
+{Austin, TX}
+{}
+{
+Developed a GNURadio
   module to control, receive and display samples from a custom high
   bandwidth radio receiver.
 \begin{itemize}
@@ -104,14 +137,16 @@ CMake, Autotools, Qt, }
   10GbE.
 \item Created Python wrappings for C library using SWIG.
 \item Created graphical block for GNURadio Companion using XML.
-\end{itemize}}
+\end{itemize}
+}
 
-\cventry{Aug - Dec 2011}{Vibration Sensor System}{Freelance
-  Project}{Austin, TX}{}{Created a small embedded system that used an
-  accelerometer to measure large vibrations.}
-
-\cventry{Jun - Aug  2011}{Speech Detector}{Flex-Radio Systems}{Round
-  Rock, TX}{}{Created non-computationally intensive speech detector
+\cventry{Jun - Aug  2011}
+{Speech Detector}
+{Flex-Radio Systems}
+{Austin, TX}
+{}
+{
+Created non-computationally intensive speech detector
   for existing Software Designed Radio System based on Motorola's
   MICOM circuit \cite{VOXPaper}.
 \begin{itemize}
@@ -126,7 +161,8 @@ CMake, Autotools, Qt, }
 \item Combined features from the analog circuit and digital approaches
 to create a robust speech detection system that maintained very low
 computation overhead.
-\end{itemize}}%
+\end{itemize}
+}
 
 %\subsection{School Related}
 \cventry{Jan - Apr 2010/2011}{Autonomous Robot}{IEEE Student
@@ -144,19 +180,30 @@ computation overhead.
   Implemented a MIPS interpreter with a simulation of CPU Pipeline
   execution including collisions in C. }
 
-\cventry{Jan - Dec 2010}{Real-Time Powerline DAQ}{Capstone
-  Project}{}{}{Modified existing LabView DAQ System and created new
+\cventry{Jan - Dec 2010}
+{Real-Time Powerline DAQ}
+{Capstone Project}
+{}
+{}
+{
+Modified existing LabView DAQ System and created new
   system in order to capture, save and display real-time waveforms
   using Agilent U2353A DAQ.
 \begin{itemize}
-\item Designed as Qued-State Machine.
+\item Designed as Queued-State Machine.
 \item Used primarily to capture voltage and current information from
 live power-line feeds.
 \item Allos the implementation of post caputre processing on live
   streams using Matlab.
-\end{itemize}}
+\end{itemize}
+}
 
-\cventry{Aug - Dec 2010}{Teaching Assistant}{``Circuits and Devices''}{}{}{Helped manage class lab section.}
+\cventry{Aug - Dec 2010}
+{Teaching Assistant}
+{``Circuits and Devices''}
+{}
+{}
+{Helped manage class lab section.}
 
 \section{Activities}
 \cventry{2010 - 2011}{President}{IEEE Student Branch}{}{}{
@@ -169,7 +216,7 @@ live power-line feeds.
 
 \cventry{2010 - 2011}{Vice-President}{Water Polo Club}{}{}{
   \begin{itemize}
-  \item Help manage Club's operations and reprentation within school system.
+  \item Help manage Club's operations and representation within school system.
   \end{itemize} }
 
 \renewcommand{\listitemsymbol}{-~}            % change the symbol for lists
